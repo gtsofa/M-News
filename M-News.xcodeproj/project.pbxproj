@@ -14,6 +14,8 @@
 		C6DCF0D2261CBB880049D989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DCF0D0261CBB880049D989 /* LaunchScreen.storyboard */; };
 		C6DCF0DD261CBB880049D989 /* M_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF0DC261CBB880049D989 /* M_NewsTests.swift */; };
 		C6DCF0E8261CBB880049D989 /* M_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF0E7261CBB880049D989 /* M_NewsUITests.swift */; };
+		C6DCF103261CBDD20049D989 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF102261CBDD20049D989 /* LoginController.swift */; };
+		C6DCF109261CC0440049D989 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF108261CC0440049D989 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C6DCF0E3261CBB880049D989 /* M-NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M-NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DCF0E7261CBB880049D989 /* M_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_NewsUITests.swift; sourceTree = "<group>"; };
 		C6DCF0E9261CBB880049D989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6DCF102261CBDD20049D989 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C6DCF108261CC0440049D989 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		C6DCF0C4261CBB840049D989 /* M-News */ = {
 			isa = PBXGroup;
 			children = (
+				C6DCF107261CC0020049D989 /* Utils */,
+				C6DCF0FE261CBD7D0049D989 /* Controller */,
 				C6DCF0C5261CBB840049D989 /* AppDelegate.swift */,
 				C6DCF0C7261CBB840049D989 /* SceneDelegate.swift */,
 				C6DCF0C9261CBB840049D989 /* ViewController.swift */,
@@ -123,6 +129,22 @@
 				C6DCF0E9261CBB880049D989 /* Info.plist */,
 			);
 			path = "M-NewsUITests";
+			sourceTree = "<group>";
+		};
+		C6DCF0FE261CBD7D0049D989 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6DCF102261CBDD20049D989 /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6DCF107261CC0020049D989 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C6DCF108261CC0440049D989 /* Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
 				C6DCF0CA261CBB840049D989 /* ViewController.swift in Sources */,
+				C6DCF103261CBDD20049D989 /* LoginController.swift in Sources */,
 				C6DCF0C6261CBB840049D989 /* AppDelegate.swift in Sources */,
 				C6DCF0C8261CBB840049D989 /* SceneDelegate.swift in Sources */,
 			);
