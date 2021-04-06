@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>285037590007-h1a4m3tavu46pgbg4b78m70el3ogocoi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.285037590007-h1a4m3tavu46pgbg4b78m70el3ogocoi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCBufFP06GKODPRlVU_ECIKOxdTH7qooFk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>285037590007</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>gtsofa.com.M-News</string>
+	<key>PROJECT_ID</key>
+	<string>m-news-a6bcc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>m-news-a6bcc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:285037590007:ios:97b5608fcf49d0ec17eaf2</string>
+</dict>
+</plist>
