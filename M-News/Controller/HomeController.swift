@@ -8,20 +8,34 @@
 import UIKit
 import Firebase
 
-class HomeController: UIViewController {
+class HomeController: UITabBarController {
     //MARK: Properties
     //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
+        checkIfUserIsLoggedIN()
+        //signOut()
     }
     
     //MARK: Helper functions
     func configureUI() {
-        checkIfUserIsLoggedIN()
-        //signOut()
-        view.backgroundColor = .red
+        view.backgroundColor = .green
+        navigationItem.title = "Dashboards"
+        let dashboardController = UINavigationController(rootViewController: DashboardController())
+        let favoritesController = UINavigationController(rootViewController: FavoritesController())
+        
+        viewControllers = [dashboardController, favoritesController]
+        
+        let item1 = UITabBarItem()
+        item1.title = "DASHBOARD"
+        item1.image = UIImage(named: "no images")
+        
+        let item2 = UITabBarItem(title: "FAVORITES", image: UIImage(named: "FAV IMAGES"), tag: 1)
+        dashboardController.tabBarItem = item1
+        favoritesController.tabBarItem = item2
+        
+        UITabBar.appearance().tintColor = .mainAmber
     }
     
     func checkIfUserIsLoggedIN() {
@@ -33,7 +47,7 @@ class HomeController: UIViewController {
             
         }
         else {
-            print("DEBUG: User id is \(Auth.auth().currentUser?.uid)")
+            configureUI()
         }
     }
     

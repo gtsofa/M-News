@@ -22,6 +22,8 @@
 		C6DCF10E261CE6240049D989 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF10D261CE6240049D989 /* SignUpController.swift */; };
 		C6DCF113261CF3E70049D989 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6DCF112261CF3E70049D989 /* GoogleService-Info.plist */; };
 		C6DCF134261D345F0049D989 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF133261D345F0049D989 /* HomeController.swift */; };
+		C6DCF139261D42B70049D989 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF138261D42B70049D989 /* DashboardController.swift */; };
+		C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF13D261D43360049D989 /* FavoritesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		C6DCF10D261CE6240049D989 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		C6DCF112261CF3E70049D989 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C6DCF133261D345F0049D989 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C6DCF138261D42B70049D989 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		C6DCF13D261D43360049D989 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		DFE959641686819382C250DA /* Pods_M_News_M_NewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_News_M_NewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9290184A8F72AFC13D25499 /* Pods-M-NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-NewsTests.release.xcconfig"; path = "Target Support Files/Pods-M-NewsTests/Pods-M-NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +178,8 @@
 				C6DCF102261CBDD20049D989 /* LoginController.swift */,
 				C6DCF10D261CE6240049D989 /* SignUpController.swift */,
 				C6DCF133261D345F0049D989 /* HomeController.swift */,
+				C6DCF138261D42B70049D989 /* DashboardController.swift */,
+				C6DCF13D261D43360049D989 /* FavoritesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,7 +440,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DCF139261D42B70049D989 /* DashboardController.swift in Sources */,
 				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
+				C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */,
 				C6DCF0CA261CBB840049D989 /* ViewController.swift in Sources */,
 				C6DCF134261D345F0049D989 /* HomeController.swift in Sources */,
 				C6DCF103261CBDD20049D989 /* LoginController.swift in Sources */,

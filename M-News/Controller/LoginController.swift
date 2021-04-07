@@ -113,6 +113,10 @@ class LoginController: UIViewController {
                 return
             }
             print("Successfully logged user in..")
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else { return}
+            controller.configureUI()
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
