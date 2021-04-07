@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		C6DCF109261CC0440049D989 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF108261CC0440049D989 /* Extension.swift */; };
 		C6DCF10E261CE6240049D989 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF10D261CE6240049D989 /* SignUpController.swift */; };
 		C6DCF113261CF3E70049D989 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6DCF112261CF3E70049D989 /* GoogleService-Info.plist */; };
+		C6DCF134261D345F0049D989 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF133261D345F0049D989 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C6DCF108261CC0440049D989 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C6DCF10D261CE6240049D989 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		C6DCF112261CF3E70049D989 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C6DCF133261D345F0049D989 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DFE959641686819382C250DA /* Pods_M_News_M_NewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_News_M_NewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9290184A8F72AFC13D25499 /* Pods-M-NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-NewsTests.release.xcconfig"; path = "Target Support Files/Pods-M-NewsTests/Pods-M-NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +109,6 @@
 				0698AD771DE2DC38C3CAF85D /* Pods-M-NewsTests.debug.xcconfig */,
 				F9290184A8F72AFC13D25499 /* Pods-M-NewsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +173,7 @@
 			children = (
 				C6DCF102261CBDD20049D989 /* LoginController.swift */,
 				C6DCF10D261CE6240049D989 /* SignUpController.swift */,
+				C6DCF133261D345F0049D989 /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +436,7 @@
 			files = (
 				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
 				C6DCF0CA261CBB840049D989 /* ViewController.swift in Sources */,
+				C6DCF134261D345F0049D989 /* HomeController.swift in Sources */,
 				C6DCF103261CBDD20049D989 /* LoginController.swift in Sources */,
 				C6DCF0C6261CBB840049D989 /* AppDelegate.swift in Sources */,
 				C6DCF0C8261CBB840049D989 /* SceneDelegate.swift in Sources */,
