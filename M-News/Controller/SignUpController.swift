@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpController: UIViewController {
     //MARK: Properties
@@ -46,7 +47,7 @@ class SignUpController: UIViewController {
     private let registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.white, for: .normal)
-        button.setTitle("LOGIN", for: .normal)
+        button.setTitle("SIGN UP", for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 10
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -79,6 +80,23 @@ class SignUpController: UIViewController {
     }
     
     @objc func register() {
-        print("register me...")
+        guard let email = emailText.text else { return }
+        guard let fullname = fullnameText.text else { return }
+        guard let password = passwordText.text else { return}
+    
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("Failed to register user with error \(error)")
+                return
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            let values = ["email": email, "fullname": fullname]
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+                print("Successfully registered user and saved the data...")
+            }
+            
+        }
     }
 }
