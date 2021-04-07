@@ -17,6 +17,8 @@ class DashboardController: UIViewController {
     
     //MARK: Helper function
     func configureUI() {
+        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .white
     }
+    
 }

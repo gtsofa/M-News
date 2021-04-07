@@ -10,6 +10,7 @@ import Firebase
 
 class HomeController: UITabBarController {
     //MARK: Properties
+
     //MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -21,21 +22,25 @@ class HomeController: UITabBarController {
     //MARK: Helper functions
     func configureUI() {
         view.backgroundColor = .green
-        navigationItem.title = "Dashboards"
+        //navigationItem.title = "Dashboards"
         let dashboardController = UINavigationController(rootViewController: DashboardController())
         let favoritesController = UINavigationController(rootViewController: FavoritesController())
+        let accountController = UINavigationController(rootViewController: AccountController())
         
-        viewControllers = [dashboardController, favoritesController]
+        viewControllers = [dashboardController, favoritesController, accountController]
         
         let item1 = UITabBarItem()
         item1.title = "DASHBOARD"
         item1.image = UIImage(named: "no images")
         
         let item2 = UITabBarItem(title: "FAVORITES", image: UIImage(named: "FAV IMAGES"), tag: 1)
+        let item3 = UITabBarItem(title: "ACCOUNT", image: UIImage(named: "ACCOUNT"), tag: 2)
         dashboardController.tabBarItem = item1
         favoritesController.tabBarItem = item2
+        accountController.tabBarItem = item3
         
-        UITabBar.appearance().tintColor = .mainAmber
+        
+        UITabBar.appearance().tintColor = .systemBlue
     }
     
     func checkIfUserIsLoggedIN() {
@@ -57,5 +62,10 @@ class HomeController: UITabBarController {
         } catch {
             print("DEBUG: Error signing out")
         }
+    }
+    
+    //MARK: Selectors
+    @objc func handleMenuToggle() {
+        print("toggled...")
     }
 }

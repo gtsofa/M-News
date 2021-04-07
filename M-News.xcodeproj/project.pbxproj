@@ -24,6 +24,10 @@
 		C6DCF134261D345F0049D989 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF133261D345F0049D989 /* HomeController.swift */; };
 		C6DCF139261D42B70049D989 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF138261D42B70049D989 /* DashboardController.swift */; };
 		C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF13D261D43360049D989 /* FavoritesController.swift */; };
+		C6DCF14D261D8DF00049D989 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF14C261D8DF00049D989 /* AccountController.swift */; };
+		C6DCF159261D946B0049D989 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF158261D946B0049D989 /* MenuOptionCell.swift */; };
+		C6DCF15F261D9D420049D989 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF15E261D9D420049D989 /* MenuOption.swift */; };
+		C6DCF164261DADE20049D989 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF163261DADE10049D989 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		C6DCF133261D345F0049D989 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C6DCF138261D42B70049D989 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		C6DCF13D261D43360049D989 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		C6DCF14C261D8DF00049D989 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		C6DCF158261D946B0049D989 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
+		C6DCF15E261D9D420049D989 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		C6DCF163261DADE10049D989 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		DFE959641686819382C250DA /* Pods_M_News_M_NewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_News_M_NewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9290184A8F72AFC13D25499 /* Pods-M-NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-NewsTests.release.xcconfig"; path = "Target Support Files/Pods-M-NewsTests/Pods-M-NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +149,8 @@
 		C6DCF0C4261CBB840049D989 /* M-News */ = {
 			isa = PBXGroup;
 			children = (
+				C6DCF15D261D9D2B0049D989 /* Model */,
+				C6DCF157261D944B0049D989 /* View */,
 				C6DCF107261CC0020049D989 /* Utils */,
 				C6DCF0FE261CBD7D0049D989 /* Controller */,
 				C6DCF0C5261CBB840049D989 /* AppDelegate.swift */,
@@ -180,6 +190,8 @@
 				C6DCF133261D345F0049D989 /* HomeController.swift */,
 				C6DCF138261D42B70049D989 /* DashboardController.swift */,
 				C6DCF13D261D43360049D989 /* FavoritesController.swift */,
+				C6DCF14C261D8DF00049D989 /* AccountController.swift */,
+				C6DCF163261DADE10049D989 /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +202,22 @@
 				C6DCF108261CC0440049D989 /* Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C6DCF157261D944B0049D989 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6DCF158261D946B0049D989 /* MenuOptionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6DCF15D261D9D2B0049D989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6DCF15E261D9D420049D989 /* MenuOption.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FFC410BCFCF622A2D958F514 /* Frameworks */ = {
@@ -441,7 +469,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6DCF139261D42B70049D989 /* DashboardController.swift in Sources */,
+				C6DCF164261DADE20049D989 /* SettingsController.swift in Sources */,
+				C6DCF15F261D9D420049D989 /* MenuOption.swift in Sources */,
+				C6DCF159261D946B0049D989 /* MenuOptionCell.swift in Sources */,
 				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
+				C6DCF14D261D8DF00049D989 /* AccountController.swift in Sources */,
 				C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */,
 				C6DCF0CA261CBB840049D989 /* ViewController.swift in Sources */,
 				C6DCF134261D345F0049D989 /* HomeController.swift in Sources */,
