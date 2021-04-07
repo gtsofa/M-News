@@ -38,6 +38,7 @@ class SignUpController: UIViewController {
     private lazy var passwordText: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Password"
+        tf.isSecureTextEntry = true
         tf.setLeftPaddingPoints(10)
         //tf.layer.cornerRadius = 20
         //tf.backgroundColor = .lightGray
@@ -86,7 +87,7 @@ class SignUpController: UIViewController {
     
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                print("Failed to register user with error \(error)")
+                print("DEBUG: Failed to register user with error \(error.localizedDescription)")
                 return
             }
             

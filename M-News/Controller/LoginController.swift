@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -17,12 +18,22 @@ class LoginController: UIViewController {
         return label
         }()
     
+    private lazy var emailText: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Email"
+        tf.setLeftPaddingPoints(10)
+        //tf.layer.cornerRadius = 20
+        //tf.backgroundColor = .lightGray
+        return tf
+        }()
+    
     private lazy var passwordText: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter Password"
         tf.setLeftPaddingPoints(10)
-        tf.layer.cornerRadius = 20
-        tf.backgroundColor = .lightGray
+        tf.isSecureTextEntry = true
+        //tf.layer.cornerRadius = 20
+        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -71,29 +82,38 @@ class LoginController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         view.addSubview(titleLabel)
-        titleLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 120, paddingLeft: 16, paddingRight: 16)
+        titleLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingLeft: 16, paddingRight: 16)
         
-        let loginStack = UIStackView(arrangedSubviews: [passwordText, loginButton])
+        let loginStack = UIStackView(arrangedSubviews: [emailText, passwordText, loginButton])
         loginStack.axis = .vertical
         loginStack.distribution = .fillEqually
-        loginStack.spacing = 24
+        loginStack.spacing = 16
         view.addSubview(loginStack)
-        loginStack.anchor(top: titleLabel.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 50, paddingLeft: 16, paddingRight: 16)
+        loginStack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16)
         
         view.addSubview(separatorLabel)
-        separatorLabel.anchor(top: titleLabel.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 210, paddingLeft: 150, paddingRight: 16)
+        separatorLabel.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 260, paddingLeft: 150, paddingRight: 16)
         
         let register = UIStackView(arrangedSubviews: [createAccount, resetPasswordButton])
         register.axis = .horizontal
         register.distribution = .fillEqually
         register.spacing = 10
         view.addSubview(register)
-        register.anchor(top: titleLabel.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 16, paddingRight: 50)
+        register.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 250, paddingLeft: 16, paddingRight: 50)
         
     }
     
     @objc func login() {
-        print("take me in...")
+        guard let email = emailText.text else { return }
+        guard let password = passwordText.text else { return}
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Failed to log user in with error \(error.localizedDescription)")
+                return
+            }
+            print("Successfully logged user in..")
+        }
     }
     
     @objc func resetPassword() {
