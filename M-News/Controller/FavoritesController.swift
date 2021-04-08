@@ -18,6 +18,6 @@ class FavoritesController: UIViewController {
     //MARK: Helper function
     func configureUI() {
         navigationController?.isNavigationBarHidden = true
-        view.backgroundColor = .black
+        view.backgroundColor = .white
     }
 }
