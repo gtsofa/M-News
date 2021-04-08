@@ -10,7 +10,7 @@ import Firebase
 
 class HomeController: UITabBarController {
     //MARK: Properties
-
+    var comingArticles = ""
     //MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -23,7 +23,16 @@ class HomeController: UITabBarController {
     func configureUI() {
         view.backgroundColor = .green
         //navigationItem.title = "Dashboards"
-        let dashboardController = UINavigationController(rootViewController: DashboardController())
+        let controller = DashboardController()
+        
+        let dashboardController = UINavigationController(rootViewController: controller)
+        print("hmmmmm!")
+         print("ciao...\(comingArticles) loi")
+        let nome = "jambo"
+        
+        //AccountService.shared.userInfo = "jambo..."
+        controller.incomingdashboard = nome
+        
         let favoritesController = UINavigationController(rootViewController: FavoritesController())
         let accountController = UINavigationController(rootViewController: AccountController())
         
@@ -47,6 +56,9 @@ class HomeController: UITabBarController {
         if Auth.auth().currentUser?.uid == nil {
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
+                //nav.isModalInPresentation = true
+                //nav.modalPresentationStyle = .fullScreen
+                
                 self.present(nav, animated: true, completion: nil)
             }
             

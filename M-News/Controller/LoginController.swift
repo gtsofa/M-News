@@ -8,6 +8,12 @@
 import UIKit
 import Firebase
 
+/*class AccountService {
+    static let shared = AccountService()
+    private init() {}
+    var userInfo: Any?
+}*/
+
 class LoginController: UIViewController {
     
     //MARK: Properties
@@ -114,6 +120,12 @@ class LoginController: UIViewController {
             }
             print("Successfully logged user in..")
             guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else { return}
+            
+            let prova = "hadi hapo..."
+            //AccountService.shared.userInfo = prova
+            controller.comingArticles = prova
+            
+            //self.navigationController?.pushViewController(controller, animated: true)
             controller.configureUI()
             
             self.dismiss(animated: true, completion: nil)
