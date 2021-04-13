@@ -31,7 +31,8 @@ class HomeController: UITabBarController {
         let nome = "jambo"
         
         //AccountService.shared.userInfo = "jambo..."
-        controller.incomingdashboard = nome
+        //controller.incomingdashboard = nome
+        
         
         let favoritesController = UINavigationController(rootViewController: FavoritesController())
         let accountController = UINavigationController(rootViewController: AccountController())

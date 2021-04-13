@@ -9,26 +9,33 @@ import UIKit
 
 class DashboardController: UIViewController {
     //MARK: Properties
-    var incomingdashboard = ""
+    var news = ArticleManager()
     var tableView = UITableView()
-    private let cellid = "dashboard cell id"
-    //MARK: Life cycle
+    var page = 1
+    fileprivate let cellId = "dashboard tb cell"
+    
+    
+    //MARK: Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.getNews { (news) in
-            guard let news = news else {return }
-            print("\(news[0].title)")
-        }
+        news.performRequest(page: page)
         configureUI()
+        //configureTableview()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: Notification.Name("didFinishParsing"), object: nil)
     }
     
-    //MARK: Helper function
+    @objc func refreshTableView(){
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    //MARK: Helper functions
     func configureUI() {
-        
-        print("hello...\(incomingdashboard) is....")
-        
-        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.isNavigationBarHidden = true
+        //title = "News"
         configureTableview()
     }
     
@@ -36,7 +43,8 @@ class DashboardController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellid)
+        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.rowHeight = 150
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -48,15 +56,23 @@ class DashboardController: UIViewController {
     }
 }
 
-//MARK: Table view datasource and delegate
-extension DashboardController: UITableViewDelegate, UITableViewDataSource {
+//MARK: Table datasource and delegate
+extension DashboardController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        
+        return news.articles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! NewsTableViewCell
+        let stories = news.articles
+        var news: ArticlesData
+        
+        news = stories![indexPath.row]
+        cell.authorName.text = news.unwrappedAuthor.trunc(length: 15)
+        cell.headLine.text = news.unwrappedmyDescription.trunc(length: 100)
+        cell.newsImage.downloadImage(from: news.urlImage ?? " ")
+        cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat()
+        return cell
     }
-    
-    
 }

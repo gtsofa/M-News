@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct News: Codable {
+struct News: Decodable {
     let author: String?
     let title: String?
     let description: String?
