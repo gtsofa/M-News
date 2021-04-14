@@ -21,18 +21,11 @@ class HomeController: UITabBarController {
     
     //MARK: Helper functions
     func configureUI() {
-        view.backgroundColor = .green
+        //view.backgroundColor = .green
         //navigationItem.title = "Dashboards"
         let controller = DashboardController()
         
         let dashboardController = UINavigationController(rootViewController: controller)
-        print("hmmmmm!")
-         print("ciao...\(comingArticles) loi")
-        let nome = "jambo"
-        
-        //AccountService.shared.userInfo = "jambo..."
-        //controller.incomingdashboard = nome
-        
         
         let favoritesController = UINavigationController(rootViewController: FavoritesController())
         let accountController = UINavigationController(rootViewController: AccountController())
