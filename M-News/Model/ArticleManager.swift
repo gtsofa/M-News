@@ -5,10 +5,14 @@
 //  Created by Julius on 13/04/2021.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 class ArticleManager {
+    
     var articles: [ArticlesData]? = []
+    var news: [News] = []
+    
     var baseUrl = "https://newsapi.org/v2/everything?q=covid&sortBy=popularity"
     var apiKey = "&apiKey=3c1e7890bc03419a8628fdfb2e05cc90&"
     

@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class DashboardController: UIViewController {
     //MARK: Properties
+    var urlSelected = ""
+    
     var news = ArticleManager()
     var tableView = UITableView()
     var page = 1
@@ -34,8 +37,8 @@ class DashboardController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
-        //navigationController?.isNavigationBarHidden = true
-        //title = "News"
+        navigationController?.isNavigationBarHidden = true
+        //title = "Latest News"
         configureTableview()
     }
     
@@ -44,7 +47,7 @@ class DashboardController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: cellId)
-        tableView.rowHeight = 150
+        //tableView.rowHeight = 150
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +61,9 @@ class DashboardController: UIViewController {
 
 //MARK: Table datasource and delegate
 extension DashboardController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 163
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return news.articles?.count ?? 0
@@ -74,5 +80,17 @@ extension DashboardController: UITableViewDataSource, UITableViewDelegate {
         cell.newsImage.downloadImage(from: news.urlImage ?? " ")
         cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favorite = UIContextualAction(style: .normal, title: "Favorite") { (_, _, completionHandler) in
+            completionHandler(true)
+            guard let article = self.news.articles?[indexPath.row] else {return}
+            //CoreDataManager.sharedInstance.saveArticle(article: article)
+            //self.alert(message: "", title: "Saved")
+        }
+        favorite.backgroundColor = .systemBlue
+        let swipe = UISwipeActionsConfiguration(actions: [favorite])
+        return swipe
     }
 }
