@@ -8,12 +8,6 @@
 import UIKit
 import Firebase
 
-/*class AccountService {
-    static let shared = AccountService()
-    private init() {}
-    var userInfo: Any?
-}*/
-
 class LoginController: UIViewController {
     
     //MARK: Properties
@@ -28,8 +22,6 @@ class LoginController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.setLeftPaddingPoints(10)
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -38,8 +30,6 @@ class LoginController: UIViewController {
         tf.placeholder = "Password"
         tf.setLeftPaddingPoints(10)
         tf.isSecureTextEntry = true
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -122,10 +112,7 @@ class LoginController: UIViewController {
             guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else { return}
             
             let prova = "hadi hapo..."
-            //AccountService.shared.userInfo = prova
             controller.comingArticles = prova
-            
-            //self.navigationController?.pushViewController(controller, animated: true)
             controller.configureUI()
             
             self.dismiss(animated: true, completion: nil)

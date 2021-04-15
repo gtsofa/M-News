@@ -25,13 +25,10 @@ class FavoritesController: UIViewController {
         getFetchResults()
         configureTableView()
         view.backgroundColor = .white
-        //navigationController?.isNavigationBarHidden = true
-        print("favorites tab bar...")
     }
     
     //MARK: Helper function
     func getFetchResults() {
-        //fetchedResultController = getResultFetched
         fetchedResultController = getResultFetchedResultController()
         fetchedResultController.delegate = self
         do {
@@ -46,7 +43,6 @@ class FavoritesController: UIViewController {
         tableView.delegate = self
         
         tableView.register(FavoriteTableViewCell.self, forCellReuseIdentifier: cellId)
-        //tableView.rowHeight = 150
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -71,20 +67,7 @@ extension FavoritesController: UITableViewDataSource, UITableViewDelegate,NSFetc
         return numberOfSections
     }
     
-     func prepare(for segue: UIStoryboardSegue, sender:UITableViewCell) {
-        let indexPath = tableView.indexPath(for: sender)
-        let task: News = fetchedResultController.object(at: indexPath ?? []) as! News
-        
-        if segue.identifier == "articles2"{
-            let destinationController = segue.destination as! FavoritedViewController
-            destinationController.website = task
-        }
-        
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //let indexPath = tableView.indexPath(for: sender)
         let task: News = fetchedResultController.object(at: indexPath ) as! News
         
         let destinationController = FavoritedViewController()
@@ -102,15 +85,14 @@ extension FavoritesController: UITableViewDataSource, UITableViewDelegate,NSFetc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FavoriteTableViewCell //SaveTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FavoriteTableViewCell
         let news = fetchedResultController.object(at: indexPath as IndexPath) as! News
         cell.authorName.text = news.unwrappedAuthor.trunc(length: 21)
         cell.headLine.text = news.unwrappedmyDescription.trunc(length: 82)
-        cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat() //publishedAt?.convertToDisplayFormat()
+        cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat()
         cell.newsImage.downloadImage(from: news.urlImage ?? "")
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -131,23 +113,3 @@ extension FavoritesController: UITableViewDataSource, UITableViewDelegate,NSFetc
     
 }
 
-
-/*
-extension FavoritesController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionNumbers = fetchedResultController.sections?[section].numberOfObjects ?? 0
-        return sectionNumbers
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    
-}
-
-// MARK: ns fetch
-extension FavoritesController: NSFetchedResultsControllerDelegate {
-    
-}*/

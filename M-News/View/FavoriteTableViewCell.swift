@@ -51,16 +51,12 @@ class FavoriteTableViewCell: UITableViewCell {
     //MARK: Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //selectionStyle = .none
         self.contentView.addSubview(newsImage)
         containerView.addSubview(authorName)
         containerView.addSubview(headLine)
         containerView.addSubview(timePublication)
         self.contentView.addSubview(containerView)
         
-        //addSubview(newsImage)
-        //addSubview(authorName)
-        //newsImage.translatesAutoresizingMaskIntoConstraints = false
         newsImage.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         newsImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
         newsImage.widthAnchor.constraint(equalToConstant: 120).isActive = true

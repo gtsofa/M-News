@@ -16,13 +16,10 @@ class HomeController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIN()
-        //signOut()
     }
     
     //MARK: Helper functions
     func configureUI() {
-        //view.backgroundColor = .green
-        //navigationItem.title = "Dashboards"
         let controller = DashboardController()
         
         let dashboardController = UINavigationController(rootViewController: controller)
@@ -50,8 +47,6 @@ class HomeController: UITabBarController {
         if Auth.auth().currentUser?.uid == nil {
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
-                //nav.isModalInPresentation = true
-                //nav.modalPresentationStyle = .fullScreen
                 
                 self.present(nav, animated: true, completion: nil)
             }
@@ -72,6 +67,5 @@ class HomeController: UITabBarController {
     
     //MARK: Selectors
     @objc func handleMenuToggle() {
-        print("toggled...")
     }
 }

@@ -102,9 +102,6 @@ extension DashboardController: UITableViewDataSource, UITableViewDelegate {
             guard let article = self.news.articles?[indexPath.row] else {return}
             CoreDataManager.sharedInstance.saveArticle(article: article)
             
-            //let controller = FavoritesController()
-            //self.navigationController?.pushViewController(controller, animated: true)
-            
             self.alert(message:"", title: "Saved")
         }
         
@@ -114,14 +111,7 @@ extension DashboardController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //tableView.deselectRow(at: indexPath, animated: true)
-        print("selected for action...")
-        
-        /*let website = news.articles?[indexPath.row].unwrappedUrlWebsite
-        let activityViewController = UIActivityViewController(activityItems: [website ?? ""], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: nil)*/
-        
-        //let website = news.articles?[indexPath.row].unwrappedUrlWebsite
+
         let stories = news.articles
         let destinationController = ArticleViewController()
         destinationController.website = stories![(tableView.indexPathForSelectedRow?.row)!]

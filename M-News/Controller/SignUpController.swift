@@ -21,8 +21,6 @@ class SignUpController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.setLeftPaddingPoints(10)
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -30,8 +28,6 @@ class SignUpController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Fullname"
         tf.setLeftPaddingPoints(10)
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -40,8 +36,6 @@ class SignUpController: UIViewController {
         tf.placeholder = "Password"
         tf.isSecureTextEntry = true
         tf.setLeftPaddingPoints(10)
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     

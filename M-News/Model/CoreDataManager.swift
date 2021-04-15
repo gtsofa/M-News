@@ -23,7 +23,6 @@ class CoreDataManager: NSObject {
         news.setValue("\(article.author ?? "")", forKeyPath: "author")
         news.setValue("\(article.myDescription ?? "")", forKeyPath: "myDescription")
         news.setValue("\(article.publishedAt ?? "")", forKeyPath: "publishedAt")
-        news.setValue("\(article.title ?? "")", forKeyPath: "title")
         news.setValue("\(article.urlImage ?? "")", forKeyPath: "urlImage")
         news.setValue("\(article.urlWebsite ?? "")", forKeyPath: "urlWebsite")
         
