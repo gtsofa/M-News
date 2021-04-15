@@ -26,6 +26,7 @@
 		C67CFE822626823700EC3106 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CFE812626823700EC3106 /* FavoriteTableViewCell.swift */; };
 		C67CFE8726268B1F00EC3106 /* FavoritedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CFE8626268B1F00EC3106 /* FavoritedViewController.swift */; };
 		C67CFEA42626DD8C00EC3106 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CFEA32626DD8C00EC3106 /* ArticleViewController.swift */; };
+		C67CFEA92627DBDC00EC3106 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CFEA82627DBDB00EC3106 /* ResetPasswordController.swift */; };
 		C6DCF0C6261CBB840049D989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF0C5261CBB840049D989 /* AppDelegate.swift */; };
 		C6DCF0C8261CBB840049D989 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF0C7261CBB840049D989 /* SceneDelegate.swift */; };
 		C6DCF0CA261CBB840049D989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DCF0C9261CBB840049D989 /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		C67CFE812626823700EC3106 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		C67CFE8626268B1F00EC3106 /* FavoritedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedViewController.swift; sourceTree = "<group>"; };
 		C67CFEA32626DD8C00EC3106 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		C67CFEA82627DBDB00EC3106 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		C6DCF0C2261CBB840049D989 /* M-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DCF0C5261CBB840049D989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6DCF0C7261CBB840049D989 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				C6DCF163261DADE10049D989 /* SettingsController.swift */,
 				C67CFE8626268B1F00EC3106 /* FavoritedViewController.swift */,
 				C67CFEA32626DD8C00EC3106 /* ArticleViewController.swift */,
+				C67CFEA82627DBDB00EC3106 /* ResetPasswordController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				C67A4497261E60D100AC17EC /* NewsTableViewCell.swift in Sources */,
 				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
 				C67A45022625265E00AC17EC /* ArticleManager.swift in Sources */,
+				C67CFEA92627DBDC00EC3106 /* ResetPasswordController.swift in Sources */,
 				C6DCF14D261D8DF00049D989 /* AccountController.swift in Sources */,
 				C67A4492261E583A00AC17EC /* ShadowImageView.swift in Sources */,
 				C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */,

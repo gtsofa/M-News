@@ -35,7 +35,7 @@ class LoginController: UIViewController {
     
     private lazy var passwordText: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Enter Password"
+        tf.placeholder = "Password"
         tf.setLeftPaddingPoints(10)
         tf.isSecureTextEntry = true
         //tf.layer.cornerRadius = 20
@@ -134,6 +134,9 @@ class LoginController: UIViewController {
     
     @objc func resetPassword() {
         print("reset my password pls...")
+        let controller = ResetPasswordController()
+        navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     @objc func signup() {
