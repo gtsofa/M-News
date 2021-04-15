@@ -10,8 +10,6 @@
 		149AA7E898935A302B57455D /* Pods_M_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0303351DBC85E656E0E71274 /* Pods_M_NewsTests.framework */; };
 		2D047DA686537C33A290E932 /* Pods_M_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3513AED24200BE92ECC40C3 /* Pods_M_News.framework */; };
 		9FF11D32D624E3AA9C73191F /* Pods_M_News_M_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE959641686819382C250DA /* Pods_M_News_M_NewsUITests.framework */; };
-		C67A448D261E3BF800AC17EC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A448C261E3BF800AC17EC /* HeaderView.swift */; };
-		C67A4492261E583A00AC17EC /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A4491261E583A00AC17EC /* ShadowImageView.swift */; };
 		C67A4497261E60D100AC17EC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A4496261E60D100AC17EC /* NewsTableViewCell.swift */; };
 		C67A45022625265E00AC17EC /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A45012625265E00AC17EC /* ArticleManager.swift */; };
 		C67A450726252D6B00AC17EC /* ArticlesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A450626252D6B00AC17EC /* ArticlesData.swift */; };
@@ -72,8 +70,6 @@
 		6A3B6CE50E93F89BFF98CFCE /* Pods-M-News-M-NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-News-M-NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-M-News-M-NewsUITests/Pods-M-News-M-NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84A31EAB9EDE0701F8406166 /* Pods-M-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-News.release.xcconfig"; path = "Target Support Files/Pods-M-News/Pods-M-News.release.xcconfig"; sourceTree = "<group>"; };
 		B3513AED24200BE92ECC40C3 /* Pods_M_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C67A448C261E3BF800AC17EC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		C67A4491261E583A00AC17EC /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		C67A4496261E60D100AC17EC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C67A45012625265E00AC17EC /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
 		C67A450626252D6B00AC17EC /* ArticlesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesData.swift; sourceTree = "<group>"; };
@@ -246,8 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				C6DCF158261D946B0049D989 /* MenuOptionCell.swift */,
-				C67A448C261E3BF800AC17EC /* HeaderView.swift */,
-				C67A4491261E583A00AC17EC /* ShadowImageView.swift */,
 				C67A4496261E60D100AC17EC /* NewsTableViewCell.swift */,
 				C67CFE812626823700EC3106 /* FavoriteTableViewCell.swift */,
 			);
@@ -529,10 +523,8 @@
 				C67A45022625265E00AC17EC /* ArticleManager.swift in Sources */,
 				C67CFEA92627DBDC00EC3106 /* ResetPasswordController.swift in Sources */,
 				C6DCF14D261D8DF00049D989 /* AccountController.swift in Sources */,
-				C67A4492261E583A00AC17EC /* ShadowImageView.swift in Sources */,
 				C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */,
 				C67CFE7826267E2400EC3106 /* News+CoreDataClass.swift in Sources */,
-				C67A448D261E3BF800AC17EC /* HeaderView.swift in Sources */,
 				C67CFE7326267E1C00EC3106 /* News+CoreDataProperties.swift in Sources */,
 				C67A450726252D6B00AC17EC /* ArticlesData.swift in Sources */,
 				C67CFE822626823700EC3106 /* FavoriteTableViewCell.swift in Sources */,
