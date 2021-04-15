@@ -18,4 +18,4 @@ Frameworks:
 - NS-Cache
 
 
-![sample](https://github.com/gtsofa/M-News/blob/f48cb511dfb7e1456c96513e29277508226f4e47/screenshots/frame.png)
+![sample](https://github.com/gtsofa/M-News/blob/ccf4aa81b9fba349cfeb0de2c0bd7c02ccd47e1d/screenshots/screenshot.png)
