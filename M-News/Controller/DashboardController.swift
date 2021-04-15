@@ -96,10 +96,15 @@ extension DashboardController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
         let favorite = UIContextualAction(style: .normal, title: "Favorite") { (_, _, completionHandler) in
             completionHandler(true)
             guard let article = self.news.articles?[indexPath.row] else {return}
             CoreDataManager.sharedInstance.saveArticle(article: article)
+            
+            //let controller = FavoritesController()
+            //self.navigationController?.pushViewController(controller, animated: true)
+            
             self.alert(message:"", title: "Saved")
         }
         

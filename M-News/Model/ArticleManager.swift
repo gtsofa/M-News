@@ -38,8 +38,6 @@ class ArticleManager {
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
             let jsonArticles = jsonResult?["articles"] as? [AnyObject] ?? []
             
-            print("okay: \(jsonArticles)")
-            
             for jsonArticle in jsonArticles {
                 let article = ArticlesData()
                 article.author = jsonArticle["author"] as? String

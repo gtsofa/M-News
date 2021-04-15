@@ -18,6 +18,7 @@ class FavoritesController: UIViewController {
     var fetchedResultController = NSFetchedResultsController<NSFetchRequestResult>()
     
     let tableView = UITableView()
+    fileprivate let cellId = "favorites table cell"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,11 +26,13 @@ class FavoritesController: UIViewController {
         configureTableView()
         view.backgroundColor = .white
         //navigationController?.isNavigationBarHidden = true
+        print("favorites tab bar...")
     }
     
     //MARK: Helper function
     func getFetchResults() {
         //fetchedResultController = getResultFetched
+        fetchedResultController = getResultFetchedResultController()
         fetchedResultController.delegate = self
         do {
             try fetchedResultController.performFetch()
@@ -41,6 +44,16 @@ class FavoritesController: UIViewController {
     func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(FavoriteTableViewCell.self, forCellReuseIdentifier: cellId)
+        //tableView.rowHeight = 150
+        
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
 
@@ -89,11 +102,11 @@ extension FavoritesController: UITableViewDataSource, UITableViewDelegate,NSFetc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! FavoriteTableViewCell //SaveTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FavoriteTableViewCell //SaveTableViewCell
         let news = fetchedResultController.object(at: indexPath as IndexPath) as! News
         cell.authorName.text = news.unwrappedAuthor.trunc(length: 21)
         cell.headLine.text = news.unwrappedmyDescription.trunc(length: 82)
-        cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat()
+        cell.timePublication.text = news.unwrappedPublishedAt.convertToDisplayFormat() //publishedAt?.convertToDisplayFormat()
         cell.newsImage.downloadImage(from: news.urlImage ?? "")
         return cell
     }
