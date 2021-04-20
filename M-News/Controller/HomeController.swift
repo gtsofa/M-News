@@ -20,6 +20,7 @@ class HomeController: UITabBarController {
     
     //MARK: Helper functions
     func configureUI() {
+        //configureNavigation()
         let controller = DashboardController()
         
         let dashboardController = UINavigationController(rootViewController: controller)
@@ -45,14 +46,19 @@ class HomeController: UITabBarController {
     
     func checkIfUserIsLoggedIN() {
         if Auth.auth().currentUser?.uid == nil {
+            print("DEBUG: User not logged in..")
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
+                //iOS 13.0
+                nav.isModalInPresentation = true
+                nav.modalPresentationStyle = .fullScreen
                 
                 self.present(nav, animated: true, completion: nil)
             }
             
         }
         else {
+            print("DEBUG: User id is \(Auth.auth().currentUser?.uid)")
             configureUI()
         }
     }

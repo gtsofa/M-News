@@ -95,8 +95,6 @@ extension AccountController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuOption = MenuOption(rawValue: indexPath.row) else {return}
         delegate?.handleMenuToggle(forMenuOption: menuOption)
-        
-        //guard let menuOption = menuOption else { return}
         didSelectMenuOption(menuOption: menuOption)
         
     }

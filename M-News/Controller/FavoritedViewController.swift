@@ -27,10 +27,6 @@ class FavoritedViewController: UIViewController {
         view.backgroundColor = .orange
         setupUI()
         loadWebsite()
-        
-        /*let myURL = URL(string: "https://www.apple.com")
-        let myRequest = URLRequest(url: myURL!)
-        savedArticle.load(myRequest)*/
     }
     
     // MARK: Helper function

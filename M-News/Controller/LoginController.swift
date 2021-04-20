@@ -76,6 +76,7 @@ class LoginController: UIViewController {
     
     //MARK: Helper functions
     func configureUI() {
+        configureNavigation()
         view.backgroundColor = .white
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingLeft: 16, paddingRight: 16)
@@ -99,6 +100,11 @@ class LoginController: UIViewController {
         
     }
     
+    func configureNavigation() {
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
     @objc func login() {
         guard let email = emailText.text else { return }
         guard let password = passwordText.text else { return}
@@ -109,13 +115,9 @@ class LoginController: UIViewController {
                 return
             }
             print("Successfully logged user in..")
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else { return}
+            let controller  = HomeController()
+            self.navigationController?.pushViewController(controller, animated: true)
             
-            let prova = "hadi hapo..."
-            controller.comingArticles = prova
-            controller.configureUI()
-            
-            self.dismiss(animated: true, completion: nil)
         }
     }
     

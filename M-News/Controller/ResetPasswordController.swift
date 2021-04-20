@@ -21,8 +21,6 @@ class ResetPasswordController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.setLeftPaddingPoints(10)
-        //tf.layer.cornerRadius = 20
-        //tf.backgroundColor = .lightGray
         return tf
         }()
     
@@ -72,7 +70,6 @@ class ResetPasswordController: UIViewController {
                 self.alert(message: "", title: "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password.")
             }
             else {
-                //print("\(error?.localizedDescription)")
                 self.alert(message: "", title: "\(String(describing: error?.localizedDescription))")
                 
             }
