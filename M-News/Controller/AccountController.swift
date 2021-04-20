@@ -27,6 +27,15 @@ class AccountController: UIViewController {
     func signOut() {
         do {
             try Auth.auth().signOut()
+            
+            let nav = UINavigationController(rootViewController: LoginController())
+            //iOS 13.0
+            nav.isModalInPresentation = true
+            nav.modalPresentationStyle = .fullScreen
+            
+            self.present(nav, animated: true, completion: nil)
+        
+            
         } catch {
             print("DEBUG: Error signing out")
         }

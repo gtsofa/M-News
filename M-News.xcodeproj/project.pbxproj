@@ -10,8 +10,6 @@
 		149AA7E898935A302B57455D /* Pods_M_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0303351DBC85E656E0E71274 /* Pods_M_NewsTests.framework */; };
 		2D047DA686537C33A290E932 /* Pods_M_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3513AED24200BE92ECC40C3 /* Pods_M_News.framework */; };
 		9FF11D32D624E3AA9C73191F /* Pods_M_News_M_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE959641686819382C250DA /* Pods_M_News_M_NewsUITests.framework */; };
-		C67793C1262F2ADF0005A32B /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67793C0262F2ADF0005A32B /* ContainerController.swift */; };
-		C67793C6262F2C380005A32B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67793C5262F2C380005A32B /* MenuController.swift */; };
 		C67A4497261E60D100AC17EC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A4496261E60D100AC17EC /* NewsTableViewCell.swift */; };
 		C67A45022625265E00AC17EC /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A45012625265E00AC17EC /* ArticleManager.swift */; };
 		C67A450726252D6B00AC17EC /* ArticlesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A450626252D6B00AC17EC /* ArticlesData.swift */; };
@@ -72,8 +70,6 @@
 		6A3B6CE50E93F89BFF98CFCE /* Pods-M-News-M-NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-News-M-NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-M-News-M-NewsUITests/Pods-M-News-M-NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84A31EAB9EDE0701F8406166 /* Pods-M-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-News.release.xcconfig"; path = "Target Support Files/Pods-M-News/Pods-M-News.release.xcconfig"; sourceTree = "<group>"; };
 		B3513AED24200BE92ECC40C3 /* Pods_M_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C67793C0262F2ADF0005A32B /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
-		C67793C5262F2C380005A32B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		C67A4496261E60D100AC17EC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C67A45012625265E00AC17EC /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
 		C67A450626252D6B00AC17EC /* ArticlesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesData.swift; sourceTree = "<group>"; };
@@ -230,8 +226,6 @@
 				C67CFE8626268B1F00EC3106 /* FavoritedViewController.swift */,
 				C67CFEA32626DD8C00EC3106 /* ArticleViewController.swift */,
 				C67CFEA82627DBDB00EC3106 /* ResetPasswordController.swift */,
-				C67793C0262F2ADF0005A32B /* ContainerController.swift */,
-				C67793C5262F2C380005A32B /* MenuController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -519,7 +513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67793C1262F2ADF0005A32B /* ContainerController.swift in Sources */,
 				C6DCF139261D42B70049D989 /* DashboardController.swift in Sources */,
 				C6DCF164261DADE20049D989 /* SettingsController.swift in Sources */,
 				C6DCF15F261D9D420049D989 /* MenuOption.swift in Sources */,
@@ -529,7 +522,6 @@
 				C6DCF109261CC0440049D989 /* Extension.swift in Sources */,
 				C67A45022625265E00AC17EC /* ArticleManager.swift in Sources */,
 				C67CFEA92627DBDC00EC3106 /* ResetPasswordController.swift in Sources */,
-				C67793C6262F2C380005A32B /* MenuController.swift in Sources */,
 				C6DCF14D261D8DF00049D989 /* AccountController.swift in Sources */,
 				C6DCF13E261D43360049D989 /* FavoritesController.swift in Sources */,
 				C67CFE7826267E2400EC3106 /* News+CoreDataClass.swift in Sources */,
